@@ -1,5 +1,5 @@
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools">
     <string name="app_name">Dice Roller</string>
     <string name="roll_label">Roll</string>
-    <string name="add">add</string>
+    <string name="add">dice image</string>
 </resources>
