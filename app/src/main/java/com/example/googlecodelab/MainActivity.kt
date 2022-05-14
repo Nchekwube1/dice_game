@@ -4,19 +4,22 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import android.widget.ImageView
+import androidx.databinding.DataBindingUtil
+import com.example.googlecodelab.databinding.ActivityMainBinding
 
 
 class MainActivity : AppCompatActivity() {
             private lateinit var diceImage: ImageView
             private lateinit var diceImage2: ImageView
+            private lateinit var binding:ActivityMainBinding
 
             override fun onCreate(savedInstanceState: Bundle?) {
                         super.onCreate(savedInstanceState)
-                        setContentView(R.layout.activity_main)
+                       binding = DataBindingUtil.setContentView(this,R.layout.activity_main)
 
-                        diceImage = findViewById(R.id.iv_diceImage)
-                        diceImage2 = findViewById(R.id.iv_diceImage2)
-                        val btnRoll: Button = findViewById(R.id.btn_roll)
+                        diceImage =binding.ivDiceImage
+                        diceImage2 = binding.ivDiceImage2
+                        val btnRoll: Button = binding.btnRoll
                         btnRoll.setOnClickListener { rollDice() }
 
             }
